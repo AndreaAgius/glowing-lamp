@@ -5,7 +5,8 @@
 /*global fill*/
 /*global color*/
 /*global stroke*/
-
+/*global saveCanvas*/
+/*global keyCode*/
 
 var NUM_CIRCLES = 12;
 var circleDiameter;
@@ -51,4 +52,10 @@ function draw() {
   }
   fill(color(rVal,gVal,bVal));
   stroke(color(rVal,gVal,bVal));
+}
+function keyPressed() {
+  if (keyCode === 115 || keyCode === 83) {
+    saveCanvas('geometricPattern', 'png');
+  }
+  return false;
 }
